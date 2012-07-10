@@ -1,0 +1,159 @@
+
+#background {
+}
+#time
+{
+    position: relative;
+    font-size: 60;
+    font-family: 'Impact', Charcoal, sans-serif;
+    margin-top: 100 px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#title {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    font-family: 'Spirax', cursive;
+    font-size: 50px;
+    top: -20px;
+    display: block;
+    width: 260px;
+    height: 100px;
+    margin-top: 120px;
+    margin-left: 295px;
+    color: white;
+    z-index: 4;
+    position: relative;
+
+}
+
+#tab {
+    opacity: .9;
+    height: 260px;
+    position: absolute;
+    z-index: -3;
+    width: 480px;
+    top: 0px;
+}
+
+#info {
+    position: relative;
+    float: left;
+    width: 480px;
+    left: -420px;
+    top: -100px;
+    height: 260px;
+    clear: none;
+}
+
+#text {
+    color: white;
+    font-family: 'Abel', sans-serif;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    top: -200px;
+    bottom: 20px;
+    left: 170 px;
+    display: block;
+    font-size: 16;
+}
+
+#twitter {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.twitter-hashtag-button {
+    float: right;
+    position: absolute;
+    top: 537px;
+    left: 50%;
+    margin-left: 52.5px;
+}
+
+#twitter_bg {
+    background-color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 369px;
+    width: 400px;
+    display: block;
+    zoom: 1;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 200px;
+    z-index: 0;
+    opacity: .7;
+}
+
+#twitter_timeline {
+    background-color: #ffffff;
+    color: #444;
+    display: block;
+    font-family: 'lucida grande', lucida, tahoma, helvetica, arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    padding-bottom: 0px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 0px;
+    text-align: left;
+    text-align: left;
+    width: 398px;
+    z-index: 2;
+    zoom: 1;
+    left: 50%;
+    margin-left: -200px;
+    top: 33px;
+}
+
+#gypsy {
+    color: #66CCFF;
+    font-style: none;
+    text-decoration: none;
+}
+
+#facebook {
+    position: absolute;
+    left: 50%;
+    margin-left: -190px;
+    top: 590px;
+    width: 380px;
+}
+
+#facebook-bg {
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    left: 50%;
+    margin-left: -200px;
+    top: 580;
+    width: 400px;
+    height: 44px;
+    background: #000000;
+    opacity: .7;
+    z-index: -2;
+
+}
+
+#message {
+    width: 175px;
+}
+
+#return {
+    width: 20px;
+}
