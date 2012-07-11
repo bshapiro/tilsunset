@@ -20,7 +20,7 @@ $(document).ready(function () {
             $.ajax({
               type: "POST",
               url: "/mail.php",
-              data: {"message": message}
+              data: {"message": message, 'ip': $('#ip').val(), 'time': new Date().toString()}
             });
             $('#message').attr('value', "");
             $('#info').animate({left: '-410px'});
