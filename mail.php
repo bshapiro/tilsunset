@@ -6,14 +6,10 @@
 /* All form fields are automatically passed to the PHP script through the array $HTTP_POST_VARS. */
 
 $email = 'benj.shapiro@gmail.com';
-echo $email;
 $subject = 'New comment on #TilSunset!';
-echo $subject;
 $message = $_POST['message'];
 $ip = $_POST['ip'];
 $time = $_POST['time'];
-echo 'message';
-echo $message;
 $from = "benj.shapiro@gmail.com";
 $headers = "From:" . $from;
 $myFile = "comments.txt";
