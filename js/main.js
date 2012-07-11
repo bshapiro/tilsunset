@@ -2,13 +2,13 @@ $(document).ready(function () {
     EasyjQuery_Get_IP("get_lat_long","full");
 
     $('#info').mouseenter(function () {
-        $('#info').animate({left: '-150px'}).delay(1000);
+        $('#info').animate({left: '-150px'});
 
     });
 
     $('#info').mouseleave(function () {
         if ($('#message').val() === "") {
-            $('#info').animate({left: '-420px'});
+            $('#info').animate({left: '-410px'});
             $('input').blur();
         }
     });
@@ -23,7 +23,7 @@ $(document).ready(function () {
               data: {"message": message}
             });
             $('#message').attr('value', "");
-            $('#info').animate({left: '-420px'});
+            $('#info').animate({left: '-410px'});
             $('input').blur();
         }
     });

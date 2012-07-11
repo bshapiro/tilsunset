@@ -1,13 +1,35 @@
 body {
-    background-image: url('http://2.bp.blogspot.com/_N_mOB63qPaE/TOrmrHsBWHI/AAAAAAAAQ-M/HA0U6RenD_w/s1600/Harbour_Sunset_wallpaper.jpg');
+    padding: 0px;
+    margin: 0px auto;
+    height: 100%;
+    top: 0px;
+    vertical-align: top;
+    background-color: black;
+}
+
+#main {
+    margin: 0px auto;
+    padding: 0px;
+    position: relative;
+    top: 0px;
+}
+
+#content {
+    background-image: url('../img/bg.png');
+    width: 1440px;
+    height: 900px;
+    position: relative;
+    padding: 0px;
+    margin: 0px auto;
+    top: 0px;
 }
 
 #time
 {
     position: relative;
-    font-size: 60;
+    font-size: 60px;
     font-family: 'Impact', Charcoal, sans-serif;
-    margin-top: 100 px;
+    padding-top: 110px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -23,43 +45,41 @@ body {
     width: 260px;
     height: 100px;
     margin-top: 120px;
-    margin-left: 295px;
+    margin-left: 290px;
     color: white;
     z-index: 4;
     position: relative;
-
 }
 
 #tab {
     opacity: .9;
     height: 260px;
-    position: absolute;
     z-index: -3;
     width: 480px;
+    position: absolute;
     top: 0px;
 }
 
 #info {
-    position: relative;
+    position: absolute;
     float: left;
     width: 480px;
-    left: -420px;
-    top: -100px;
+    left: -410px;
+    top: 80px;
     height: 260px;
     clear: none;
+    z-index: 20;
 }
 
 #text {
     color: white;
-    font-family: 'Abel', sans-serif;
-    position: relative;
+    font: 16px 'Abel', sans-serif;
     width: 220px;
     height: 220px;
     top: -200px;
-    bottom: 20px;
-    left: 170 px;
-    display: block;
-    font-size: 16;
+    left: 170px;
+    position: relative;
+    text-align: left;
 }
 
 #twitter {
@@ -70,11 +90,10 @@ body {
 }
 
 .twitter-hashtag-button {
-    float: right;
     position: absolute;
+    left: 772px;
     top: 537px;
-    left: 50%;
-    margin-left: 52.5px;
+    z-index: 10;
 }
 
 #twitter_bg {
@@ -98,26 +117,23 @@ body {
 #twitter_timeline {
     background-color: #ffffff;
     color: #444;
-    display: block;
     font-family: 'lucida grande', lucida, tahoma, helvetica, arial, sans-serif;
     font-size: 12px;
     font-weight: normal;
     height: 300px;
     overflow-x: hidden;
     overflow-y: hidden;
-    position: relative;
     padding-bottom: 0px;
     padding-left: 1px;
     padding-right: 1px;
     padding-top: 0px;
     text-align: left;
-    text-align: left;
     width: 398px;
-    z-index: 2;
     zoom: 1;
     left: 50%;
-    margin-left: -200px;
     top: 33px;
+    margin-left: -400px;
+    position: relative;
 }
 
 #gypsy {
@@ -132,6 +148,7 @@ body {
     margin-left: -190px;
     top: 590px;
     width: 380px;
+    z-index: 4;
 }
 
 #facebook-bg {
@@ -141,13 +158,13 @@ body {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     left: 50%;
+    top: 580px;
     margin-left: -200px;
-    top: 580;
     width: 400px;
     height: 44px;
     background: #000000;
     opacity: .7;
-    z-index: -2;
+    z-index: 1;
 
 }
 
