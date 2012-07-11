@@ -17,10 +17,14 @@ $(document).ready(function () {
         if (e.keyCode == 13) {
             var message = $('#message').val();
             console.log(message);
+            var ip = $('#ip').val();
+            var time = new Date().toString();
             $.ajax({
               type: "POST",
               url: "/mail.php",
-              data: {"message": message, 'ip': $('#ip').val(), 'time': new Date().toString()}
+              data: {"message": message,
+                     'ip': ip,
+                     'time': time}
             });
             $('#message').attr('value', "");
             $('#info').animate({left: '-410px'});
@@ -34,6 +38,8 @@ $(document).ready(function () {
 function get_lat_long(json) {
     var latitude = json.cityLatitude;
     var longitude = json.cityLongitude;
+    var ip = json.ip;
+    $('#ip').attr('value', ip);
     return update(latitude, longitude);
 }
 
