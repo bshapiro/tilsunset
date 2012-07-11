@@ -16,11 +16,8 @@ $(document).ready(function () {
     $('#message').keypress(function (e) {
         if (e.keyCode == 13) {
             var message = $('#message').val();
-            console.log(message);
             var ip = $('#ip').val();
-            console.log(ip);
             var time = new Date().toString();
-            console.log(time);
             $.ajax({
               type: "POST",
               url: "/mail.php",
@@ -42,8 +39,6 @@ function get_lat_long(json) {
     var longitude = json.cityLongitude;
     var ip = json.IP;
     $('#ip').attr('value', ip);
-    console.log(ip);
-    console.log($('#ip').attr('value'));
     return update(latitude, longitude);
 }
 
