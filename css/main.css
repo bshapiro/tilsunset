@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 body {
     padding: 0px;
     margin: 0px auto;
@@ -123,17 +125,17 @@ body {
     height: 300px;
     overflow-x: hidden;
     overflow-y: hidden;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-left: 1px;
     padding-right: 1px;
-    padding-top: 0px;
+    padding-top: 0;
+    position: absolute;
     text-align: left;
     width: 398px;
     zoom: 1;
     left: 50%;
-    top: 33px;
-    margin-left: -400px;
-    position: relative;
+    margin-left: -200px;
+    top: 233px;
 }
 
 #gypsy {
