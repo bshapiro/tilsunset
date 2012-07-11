@@ -138,6 +138,10 @@ body {
     top: 233px;
 }
 
+.twtr-join-conv {
+    display: none;
+}
+
 #gypsy {
     color: #66CCFF;
     font-style: none;
