@@ -42,6 +42,8 @@ function get_lat_long(json) {
     var longitude = json.cityLongitude;
     var ip = json.ip;
     $('#ip').attr('value', ip);
+    console.log(ip);
+    console.log($('#ip').attr('value'));
     return update(latitude, longitude);
 }
 
