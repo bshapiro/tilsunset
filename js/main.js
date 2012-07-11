@@ -18,13 +18,15 @@ $(document).ready(function () {
             var message = $('#message').val();
             console.log(message);
             var ip = $('#ip').val();
+            console.log(ip);
             var time = new Date().toString();
+            console.log(time);
             $.ajax({
               type: "POST",
               url: "/mail.php",
               data: {"message": message,
-                     'ip': ip,
-                     'time': time}
+                     "ip": ip,
+                     "time": time}
             });
             $('#message').attr('value', "");
             $('#info').animate({left: '-410px'});
