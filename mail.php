@@ -18,7 +18,6 @@ $from = "benj.shapiro@gmail.com";
 $headers = "From:" . $from;
 $myFile = "comments.txt";
 $fh = fopen($myFile, 'a');
-fwrite($fh, 'testing');
 fwrite($fh, $ip);
 fwrite($fh, "\t");
 fwrite($fh, $time);
