@@ -18,7 +18,7 @@ body {
 
 #content {
     background-image: url('../img/bg.png');
-    width: 100%;
+    width: 1440px;
     height: 900px;
     position: relative;
     padding: 0px;
