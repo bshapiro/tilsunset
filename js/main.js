@@ -40,7 +40,7 @@ $(document).ready(function () {
 function get_lat_long(json) {
     var latitude = json.cityLatitude;
     var longitude = json.cityLongitude;
-    var ip = json.ip;
+    var ip = json.IP;
     $('#ip').attr('value', ip);
     console.log(ip);
     console.log($('#ip').attr('value'));
