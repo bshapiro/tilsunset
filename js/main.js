@@ -49,7 +49,7 @@ function calc_time(today, lt, lg) {
     var date = today.getDate();
     var sunrise_sunset = new SunriseSunset(year, month, date, lt, lg);
     var gmt_offset = today.getTimezoneOffset() / 60;
-    var sunset_time = sunrise_sunset.sunsetLocalHours(-gmt_offset) +.06;
+    var sunset_time = sunrise_sunset.sunsetLocalHours(-gmt_offset) +.04;
     return sunset_time;
 }
 
