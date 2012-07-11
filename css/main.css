@@ -139,7 +139,7 @@ body {
 }
 
 .twtr-join-conv {
-    display: none;
+    display: none !important;
 }
 
 #gypsy {
@@ -171,7 +171,6 @@ body {
     background: #000000;
     opacity: .7;
     z-index: 1;
-
 }
 
 #message {
