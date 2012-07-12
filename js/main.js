@@ -11,6 +11,8 @@ $(document).ready(function () {
             $('#info').animate({left: '-410px'});
             $('input').blur();
             $('#info').clearQueue();
+            $('#thanks').hide();
+            $('#message').show();
         }
     });
 
@@ -29,10 +31,7 @@ $(document).ready(function () {
             $('#message').hide();
             $('#thanks').show();
             setTimeout(function() {
-                $('#thanks').hide();
-                $('#message').show();
                 $('#message').attr('value', "");
-                $('#info').animate({left: '-410px'});
                 $('input').blur();
             },2000);
         }
