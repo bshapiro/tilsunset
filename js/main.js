@@ -3,13 +3,14 @@ $(document).ready(function () {
     $("#thanks").hide();
     $('#info').mouseenter(function () {
         $('#info').animate({left: '-150px'});
-
+        $('#info').clearQueue();
     });
 
     $('#info').mouseleave(function () {
         if ($('#message').val() === "") {
             $('#info').animate({left: '-410px'});
             $('input').blur();
+            $('#info').clearQueue();
         }
     });
 
