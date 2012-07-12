@@ -1,6 +1,6 @@
 $(document).ready(function () {
     EasyjQuery_Get_IP("get_lat_long","full");
-
+    $("#thanks").hide();
     $('#info').mouseenter(function () {
         $('#info').animate({left: '-150px'});
 
@@ -25,9 +25,15 @@ $(document).ready(function () {
                      "ip": ip,
                      "time": time}
             });
-            $('#message').attr('value', "");
-            $('#info').animate({left: '-410px'});
-            $('input').blur();
+            $('#message').hide();
+            $('#thanks').show();
+            setTimeout(function() {
+                $('#thanks').hide();
+                $('#message').show();
+                $('#message').attr('value', "");
+                $('#info').animate({left: '-410px'});
+                $('input').blur();
+            },2000);
         }
     });
 });

@@ -148,6 +148,10 @@ body {
     text-decoration: none;
 }
 
+#thanks {
+    color: #66CCFF;
+}
+
 #facebook {
     position: absolute;
     left: 50%;
