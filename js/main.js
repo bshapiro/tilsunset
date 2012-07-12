@@ -8,11 +8,12 @@ $(document).ready(function () {
 
     $('#info').mouseleave(function () {
         if ($('#message').val() === "") {
-            $('#info').animate({left: '-410px'});
+            $('#info').animate({left: '-410px'}, function () {
+                $('#info').clearQueue();
+                $('#thanks').hide();
+                $('#message').show();
+            });
             $('input').blur();
-            $('#info').clearQueue();
-            $('#thanks').hide();
-            $('#message').show();
         }
     });
 
@@ -30,10 +31,8 @@ $(document).ready(function () {
             });
             $('#message').hide();
             $('#thanks').show();
-            setTimeout(function() {
-                $('#message').attr('value', "");
-                $('input').blur();
-            },2000);
+            $('#message').attr('value', "");
+            $('input').blur();
         }
     });
 });
