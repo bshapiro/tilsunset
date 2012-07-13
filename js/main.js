@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     if(navigator.geolocation) {
         browserSupportFlag = true;
-        navigator.geolocation.getCurrentPosition( function () {
+        navigator.geolocation.getCurrentPosition( function (position) {
             alert(position.coords.latitude);
             alert(position.coords.longitude);
             $('#time').innerHTML += position.coords.latitude.toString();
