@@ -1,3 +1,7 @@
+var browserSupportFlag;
+var mobilelatitude;
+var mobilelongitude;
+
 $(document).ready(function () {
     EasyjQuery_Get_IP("get_lat_long","full");
     $("#thanks").hide();
@@ -8,11 +12,10 @@ $(document).ready(function () {
 
     if(navigator.geolocation) {
         browserSupportFlag = true;
+
         navigator.geolocation.getCurrentPosition( function (position) {
-            alert(position.coords.latitude);
-            alert(position.coords.longitude);
-            $('#time').innerHTML += position.coords.latitude.toString();
-            $('#time').innerHTML += ',' + position.coords.longitude.toString();
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
         });
     }
 
@@ -52,6 +55,10 @@ $(document).ready(function () {
 function get_lat_long(json) {
     var latitude = json.cityLatitude;
     var longitude = json.cityLongitude;
+    if (browserSupportFlag) {
+        longitude = mobilelongitude;
+        latitude = mobilelatitude;
+    }
     var ip = json.IP;
     $('#ip').attr('value', ip);
     return update(latitude, longitude);
