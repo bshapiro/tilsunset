@@ -9,16 +9,12 @@ $(document).ready(function () {
 
     if(navigator.geolocation) {
         browserSupportFlag = true;
-        console.log('got this far');
         navigator.geolocation.getCurrentPosition( function (position) {
-            console.log(position.coords.latitude);
-            console.log(position.coords.longitude);
             update(position.coords.latitude, position.coords.longitude);
         });
     } else {
         EasyjQuery_Get_IP("get_lat_long","full");
     }
-    console.log(browserSupportFlag);
 
 
     $('#info').mouseleave(function () {
@@ -78,7 +74,6 @@ function calc_time(today, lt, lg) {
 }
 
 function update(lt, lg) {
-    console.log('got this far')
     var today = new Date();
     sunset_time = calc_time(today, lt, lg);
     var gmt_offset = today.getTimezoneOffset() / 60;
