@@ -6,6 +6,14 @@ $(document).ready(function () {
         $('#info').clearQueue();
     });
 
+    if(navigator.geolocation) {
+        browserSupportFlag = true;
+        navigator.geolocation.getCurrentPosition( function () {
+            alert(position.coords.latitude);
+            alert(position.coords.longitude);
+        });
+    }
+
     $('#info').mouseleave(function () {
         if ($('#message').val() === "") {
             $('#info').animate({left: '-410px'}, function () {
