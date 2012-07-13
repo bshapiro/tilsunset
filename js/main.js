@@ -1,9 +1,6 @@
 var browserSupportFlag;
-var mobilelatitude;
-var mobilelongitude;
 
 $(document).ready(function () {
-    EasyjQuery_Get_IP("get_lat_long","full");
     $("#thanks").hide();
     $('#info').mouseenter(function () {
         $('#info').animate({left: '-150px'});
@@ -12,12 +9,17 @@ $(document).ready(function () {
 
     if(navigator.geolocation) {
         browserSupportFlag = true;
-
+        console.log('got this far');
         navigator.geolocation.getCurrentPosition( function (position) {
-            latitude = position.coords.latitude;
-            longitude = position.coords.longitude;
+            console.log(position.coords.latitude);
+            console.log(position.coords.longitude);
+            update(position.coords.latitude, position.coords.longitude);
         });
+    } else {
+        EasyjQuery_Get_IP("get_lat_long","full");
     }
+    console.log(browserSupportFlag);
+
 
     $('#info').mouseleave(function () {
         if ($('#message').val() === "") {
@@ -76,6 +78,7 @@ function calc_time(today, lt, lg) {
 }
 
 function update(lt, lg) {
+    console.log('got this far')
     var today = new Date();
     sunset_time = calc_time(today, lt, lg);
     var gmt_offset = today.getTimezoneOffset() / 60;
