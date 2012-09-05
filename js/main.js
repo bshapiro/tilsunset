@@ -65,7 +65,7 @@ function get_lat_long(json) {
 
 function calc_time(today, lt, lg) {
     var sunset_time = new Date().sunset(lt, lg);
-    sunset_time = sunset_time.split(' ')[4];
+    sunset_time = sunset_time.toString().split(' ')[4];
     hour = parseInt(sunset_time.split(':')[0], 10);
     minute = parseInt(sunset_time.split(':')[1], 10) / 60.0;
     sunset_time_float = hour + minute;
