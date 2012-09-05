@@ -104,5 +104,5 @@ function update(lt, lg) {
     }
     time_string += hours + " : " + minutes + " : " + seconds;
     $('#time').text(time_string);
-    setTimeout("update(" + lt + "," + lg+ ")", 1000);
+    setTimeout("update(" + lt + "," + lg+ ")", 500);
 }
