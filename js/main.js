@@ -62,20 +62,22 @@ function get_lat_long(json) {
     return update(latitude, longitude);
 }
 
+var sunset_time = 0;
 
 function calc_time(today, lt, lg) {
-    var sunset_time = new Date().sunset(lt, lg);
-    sunset_time = sunset_time.toString().split(' ')[4];
+    var sunset_time_date = new Date().sunset(lt, lg);
+    sunset_time_string = sunset_time.toString().split(' ')[4];
     hour = parseInt(sunset_time.split(':')[0], 10);
     minute = parseInt(sunset_time.split(':')[1], 10) / 60.0;
-    sunset_time_float = hour + minute;
-    console.log(sunset_time_float);
-    return sunset_time_float;
+    sunset_time = hour + minute;
+    return sunset_time;
 }
 
 function update(lt, lg) {
     var today = new Date();
-    sunset_time = calc_time(today, lt, lg);
+    if (sunset_time === 0) {
+        sunset_time = calc_time(today, lt, lg);
+    }
     var gmt_offset = today.getTimezoneOffset() / 60;
     var cur_time = today.getUTCHours() - gmt_offset + ((today.getUTCSeconds() / 60) + today.getUTCMinutes()) / 60;
     if (cur_time < 0) {
