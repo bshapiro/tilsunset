@@ -65,6 +65,7 @@ function get_lat_long(json) {
 
 function calc_time(today, lt, lg) {
     var sunset_time = new Date().sunset(lt, lg);
+    console.log(sunset_time);
     return sunset_time;
 }
 
