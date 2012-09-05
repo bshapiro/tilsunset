@@ -48,8 +48,6 @@ $(document).ready(function () {
     });
 });
 
-
-
 function get_lat_long(json) {
     var latitude = json.cityLatitude;
     var longitude = json.cityLongitude;
@@ -94,7 +92,7 @@ function update(lt, lg) {
     var minutes = Math.abs(time_til_sunset * 60);
     var seconds = Math.floor((minutes % 1) * 60);
     var hours = Math.floor(minutes / 60);
-    var minutes = Math.floor(minutes % 60);
+    minutes = Math.floor(minutes % 60);
 
     var time_string = "";
     minutes = minutes.toString();
