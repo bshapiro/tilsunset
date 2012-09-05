@@ -64,12 +64,7 @@ function get_lat_long(json) {
 
 
 function calc_time(today, lt, lg) {
-    var year = today.getYear();
-    var month = today.getMonth();
-    var date = today.getDate();
-    var sunrise_sunset = new SunriseSunset(year, month, date, lt, lg);
-    var gmt_offset = today.getTimezoneOffset() / 60;
-    var sunset_time = sunrise_sunset.sunsetLocalHours(-gmt_offset);
+    var sunset_time = new Date().sunset(lt, lg);
     return sunset_time;
 }
 
@@ -89,7 +84,7 @@ function update(lt, lg) {
         time_til_sunset = sunset_time + 24 - cur_time;
     }
     var minutes = Math.abs(time_til_sunset * 60);
-    var seconds = Math.floor((minutes % 1) * 60)
+    var seconds = Math.floor((minutes % 1) * 60);
     var hours = Math.floor(minutes / 60);
     var minutes = Math.floor(minutes % 60);
 
@@ -97,12 +92,12 @@ function update(lt, lg) {
     minutes = minutes.toString();
     seconds = seconds.toString();
     if (minutes.length < 2) {
-        minutes = '0' + minutes
+        minutes = '0' + minutes;
     }
     if (seconds.length < 2) {
-        seconds = '0' + seconds
+        seconds = '0' + seconds;
     }
     time_string += hours + " : " + minutes + " : " + seconds;
-    $('#time').text(time_string)
+    $('#time').text(time_string);
     setTimeout("update(" + lt + "," + lg+ ")", 1000);
 }
