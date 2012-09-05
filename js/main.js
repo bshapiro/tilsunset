@@ -66,7 +66,7 @@ var sunset_time = 0;
 
 function calc_time(today, lt, lg) {
     var sunset_time_date = new Date().sunset(lt, lg);
-    sunset_time_string = sunset_time.toString().split(' ')[4];
+    sunset_time_string = sunset_time_date.toString().split(' ')[4];
     hour = parseInt(sunset_time_string.split(':')[0], 10);
     minute = parseInt(sunset_time_string.split(':')[1], 10) / 60.0;
     sunset_time = hour + minute;
