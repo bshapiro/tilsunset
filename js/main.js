@@ -69,7 +69,8 @@ function calc_time(today, lt, lg) {
     sunset_time_string = sunset_time_date.toString().split(' ')[4];
     hour = parseInt(sunset_time_string.split(':')[0], 10);
     minute = parseInt(sunset_time_string.split(':')[1], 10) / 60.0;
-    sunset_time = hour + minute;
+    second = parseInt(sunset_time_string.split(':')[2], 10)/ (60*60);
+    sunset_time = hour + minute + second;
     return sunset_time;
 }
 
