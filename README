@@ -1,1 +1,5 @@
-todo
+This is the codebase for #TilSunset, which can be found at http://www.tilsunset.com.
+
+#TilSunset is a simple little webapp that tells you how much time is left until sunset (in your area, conditioned on your IP address or, if you are on mobile, your geolocation).
+
+It also tracks tweets mentioning the tag #tilsunset and displays them in a twitter widget. 
