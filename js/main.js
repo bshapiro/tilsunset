@@ -32,10 +32,12 @@ $(document).ready(function () {
         if (e.keyCode == 13) {
             var message = $('#message').val();
             var ip = $('#ip').val();
+	    console.log(ip);
             var time = new Date().toString();
+	    console.log(time);
             $.ajax({
               type: "POST",
-              url: "/mail.php",
+              url: "comments.php",
               data: {"message": message,
                      "ip": ip,
                      "time": time}
